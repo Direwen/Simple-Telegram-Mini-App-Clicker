@@ -11,6 +11,9 @@ let clickCount = 0;
 const button = document.getElementById('click-button');
 const resetButton = document.getElementById('reset-button');
 const responseDiv = document.getElementById('response');
+const telegramResponseDiv = document.getElementById('telegram-response');
+
+telegramResponseDiv.textContent = user;
 
 // Set default message
 responseDiv.textContent = "Click the button to start counting!"; // Default message
