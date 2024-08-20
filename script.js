@@ -1,3 +1,9 @@
+console.log("Starting...")
+//Initialize Telegram Mini App
+const TELEGRAM = window.Telegram.WebApp;
+const user = TELEGRAM.initDataUnsafe.user;
+console.log(user)
+
 // Initialize click count
 let clickCount = 0;
 
