@@ -13,7 +13,12 @@ const resetButton = document.getElementById('reset-button');
 const responseDiv = document.getElementById('response');
 const telegramResponseDiv = document.getElementById('telegram-response');
 
-telegramResponseDiv.textContent = user;
+// Display user information in the telegram response div
+if (user) {
+    telegramResponseDiv.textContent = `Hello, ${user.first_name} ${user.last_name || ''}!`; // Display first and last name
+} else {
+    telegramResponseDiv.textContent = "User information not available."; // Fallback message
+}
 
 // Set default message
 responseDiv.textContent = "Click the button to start counting!"; // Default message
