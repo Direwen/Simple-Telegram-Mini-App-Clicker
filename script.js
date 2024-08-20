@@ -27,6 +27,7 @@ responseDiv.textContent = "Click the button to start counting!"; // Default mess
 button.addEventListener('click', () => {
     clickCount++; // Increment click count
     responseDiv.textContent = `You have clicked the button ${clickCount} times!`; // Update response
+    TELEGRAM.HapticFeedback.impactOccurred("heavy");
 });
 
 // Add click event listener to the reset button
