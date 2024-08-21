@@ -2,7 +2,10 @@ console.log("Starting...")
 //Initialize Telegram Mini App
 const TELEGRAM = window.Telegram.WebApp;
 const user = TELEGRAM.initDataUnsafe.user;
-console.log(user)
+
+//Configuration
+TELEGRAM.setHeaderColor("#2C3E50");
+TELEGRAM.setBackgroundColor("#8E44AD");
 
 // Initialize click count
 let clickCount = 0;
@@ -34,4 +37,5 @@ button.addEventListener('click', () => {
 resetButton.addEventListener('click', () => {
     clickCount = 0; // Reset click count
     responseDiv.textContent = "Click the button to start counting!"; // Reset message
+    TELEGRAM.HapticFeedback.impactOccurred("heavy");
 });
